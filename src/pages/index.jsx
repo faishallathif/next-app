@@ -19,40 +19,52 @@ const Page = () => {
   const DOM = () => {
     return (
       <div>
-        <button
-          className='bg-green-500 px-8 py-5 text-white'
-          onPointerEnter={() => {
-            setNoKamar('DLX-01')
-          }}
-          onClick={() => {
-            tambahKamar('DLX-01')
-          }}
-        >
-          DLX-01
-        </button>
-        <button
-          className='bg-green-500 px-8 py-5 text-white'
-          onPointerEnter={() => {
-            setNoKamar('DLX-02')
-          }}
-          onClick={() => {
-            tambahKamar('DLX-02')
-          }}
-        >
-          DLX-02
-        </button>
-        <button
-          className='bg-green-500 px-8 py-5 text-white'
-          onPointerEnter={() => {
-            setNoKamar('DLX-03')
-          }}
-          onClick={() => {
-            tambahKamar('DLX-03')
-          }}
-        >
-          DLX-03
-        </button>
-        <div>{kamarSelected}</div>
+        <div className='flex gap-5 mb-5 p-5 items-center'>
+          <h3>Pilih No Kamar </h3>
+          <button
+            className='bg-green-500 font-bold px-4 py-3 text-white rounded-lg group'
+            onPointerEnter={() => {
+              setNoKamar('DLX-01')
+            }}
+            onClick={() => {
+              tambahKamar('DLX-01')
+            }}
+          >
+            <span className='transform transition duration-150 group-hover:translate-y-2  '>
+              {' '}
+              DLX-01
+            </span>
+          </button>
+          <button
+            className='bg-green-500 font-bold px-4 py-3 text-white rounded-lg group'
+            onPointerEnter={() => {
+              setNoKamar('DLX-02')
+            }}
+            onClick={() => {
+              tambahKamar('DLX-02')
+            }}
+          >
+            <span className='transform transition duration-150 group-hover:translate-y-2  '>
+              {' '}
+              DLX-02
+            </span>
+          </button>
+          <button
+            className='bg-green-500 font-bold px-4 py-3 text-white rounded-lg group'
+            onPointerEnter={() => {
+              setNoKamar('DLX-03')
+            }}
+            onClick={() => {
+              tambahKamar('DLX-03')
+            }}
+          >
+            <span className='transform transition duration-150 group-hover:translate-y-2  '>
+              {' '}
+              DLX-03
+            </span>
+          </button>
+        </div>
+        <div>No kamar yang dipilih : {kamarSelected}</div>
       </div>
     )
   }
