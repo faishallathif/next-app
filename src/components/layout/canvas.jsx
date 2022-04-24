@@ -20,6 +20,7 @@ const LCanvas = ({ children }) => {
 
   return (
     <Canvas
+      camera={{ position: [0, 0, 250] }}
       mode='concurrent'
       style={{
         position: 'absolute',
@@ -27,6 +28,7 @@ const LCanvas = ({ children }) => {
       }}
       onCreated={(state) => state.events.connect(dom.current)}
     >
+      <ambientLight />
       <LControl />
       <Preload all />
       {children}
